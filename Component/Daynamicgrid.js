@@ -1,7 +1,7 @@
 import React from 'react';
 import {ScrollView, StyleSheet, Text, View} from 'react-native';
 
-function Listwithmap() {
+function Daynamicgrid() {
   const users = [
     {
       id: 1,
@@ -58,25 +58,29 @@ function Listwithmap() {
   ];
   return (
     <View>
-      <Text>List With Map</Text>
+      <Text style={{fontSize: 31}}>Daynamicgrid</Text>
       <ScrollView>
-        {users.map(item => (
-          <Text style={styles.item}>{item.name}</Text>
-        ))}
+        <View style={{flex: 1, flexDirection: 'row', flexWrap: 'wrap'}}>
+          {users.map(item => (
+            <Text style={styles.item}>{item.name}</Text>
+          ))}
+        </View>
       </ScrollView>
     </View>
   );
 }
 const styles = StyleSheet.create({
   item: {
-    fontSize: 24,
-    padding: 10,
-    color: '#fff',
+    fontSize: 25,
     backgroundColor: 'blue',
-    borderColor: 'black',
-    borderWidth: 1,
-    margin: 10,
+    color: 'white',
+    margin: 5,
+    padding: 5,
+    width: 120,
+    height: 120,
+    textAlignVertical: 'center',
+    textAlign: 'center',
   },
 });
 
-export default Listwithmap;
+export default Daynamicgrid;

@@ -1,15 +1,11 @@
+import {View, Text, StatusBar} from 'react-native';
 import React from 'react';
-import {FlatList, Text, View} from 'react-native';
-import Form from './Component/Form';
-import FlatLists from './Component/FlatLists';
-import Listwithmap from './Component/Listwithmap';
 
-function App() {
+export default function App() {
   return (
     <View>
-      <Listwithmap />
+      <StatusBar backgroundColor="orange" barStyle="dark-content" />
+      <Text>App</Text>
     </View>
   );
 }
-
-export default App;
